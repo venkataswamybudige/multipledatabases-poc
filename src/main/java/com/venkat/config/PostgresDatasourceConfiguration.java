@@ -21,7 +21,6 @@ public class PostgresDatasourceConfiguration {
 
 
     @Bean
-    @Primary
     DataSource postgresDataSource(){
         return  postgresDataSourceProperties().initializeDataSourceBuilder().build();
     }

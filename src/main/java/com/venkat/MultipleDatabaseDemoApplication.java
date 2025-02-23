@@ -26,10 +26,10 @@ public class MultipleDatabaseDemoApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-		Product product = new Product(2,"laptop",25000.00);
+		Product product = new Product(3,"mobile",25000.00);
 		productDAO.save(product);
 
-		Order order = new Order(1,"firstORDER", LocalDate.now());
+		Order order = new Order(3, "thirdORDER", LocalDate.now());
 		orderDAO.save(order);
 
 

@@ -22,11 +22,6 @@ public class MysqlDatasourceConfiguration {
 
     @Bean
     DataSource mysqlDataSource(){
-        DriverManagerDataSource dataSource = new DriverManagerDataSource();
-        dataSource.setUrl(mySqlDataSourceProperties().getUrl());
-        dataSource.setUsername(mySqlDataSourceProperties().getUsername());
-        dataSource.setPassword(mySqlDataSourceProperties().getPassword());
-        dataSource.setDriverClassName(mySqlDataSourceProperties().getDriverClassName());
-        return  dataSource;
+        return  mySqlDataSourceProperties().initializeDataSourceBuilder().build();
     }
 }
