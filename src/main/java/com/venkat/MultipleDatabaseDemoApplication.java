@@ -19,7 +19,7 @@ public class MultipleDatabaseDemoApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-		Product product = new Product(1,"laptop",25000.00);
+		Product product = new Product(2,"laptop",25000.00);
 		productDAO.save(product);
 
 
